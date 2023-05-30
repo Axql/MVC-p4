@@ -12,16 +12,20 @@
 
     <table border='1'>
         <thead>
-            <th>Voornaam</th>
-            <th>Tussenvoegsel</th>
-            <th>Achternaam</th>
-            <th>Mobiel</th>
-            <th>Datum in dienst</th>
-            <th>Aantal sterren</th>
-            <th>Voertuigen</th>
+            <th>Naam examinator</th>
+            <th>Datum Examen</th>
+            <th>Rijbewijcatagorie</th>
+            <th>Rijschool</th>
+            <th>Stad</th>
+            <th>Uitslag examen</th>
+           
         </thead>
         <tbody>
-          
+           <tr>
+            <td><?= $data['Naam']; ?>
+            </td>
+        
+        </tr>
         </tbody>
     </table>
 </body>
