@@ -1,18 +1,18 @@
 <?php
 
-class Instructeur extends BaseController
+class Examen extends BaseController
 {
-    private $instructeurModel;
+    private $ExamenModel;
 
     public function __construct()
     {
-        $this->instructeurModel = $this->model('InstructeurModel');
+        $this->ExamenModel = $this->model('InstructeurModel');
     }
 
 
     public function index()
     {
-        $result  = $this->instructeurModel->getInstructeurs();
+        $result  = $this->ExamenModel->getInstructeurs();
 
         var_dump($result);
 
@@ -33,11 +33,11 @@ foreach ($result as $info) {
 }
 
         $data = [
-            'title' => 'Instructeurs in dienst',
+            'title' => 'Overzicht afgenomen examens',
             'Naam' => $info->Voornaam . ' ' . $info->Tussenvoegsel . ' '.  $info-> Achternaam
             
         ];
 
-        $this->view('instructeur/index', $data);
+        $this->view('Examen/index', $data);
     }
 }
